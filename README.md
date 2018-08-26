@@ -1,5 +1,16 @@
 # tf-language-detector
 
+An CNN based text classification used for predicting the language used in a source file.
+
+# Dependencies
+
+install dependencies via pip
+
+```
+pip install -r requirements.txt
+```
+
+# Configuration
 
 configure the config.py as needed for the dataset
 
@@ -19,11 +30,6 @@ project-root
 
 ```
 
-use train.py for training and predict.py for testing
-
-export graph with freeze.py after training for prediction.
-
-
 # Dataset
 
 its easy to generate dataset with this simple bash script
@@ -38,3 +44,7 @@ replace `<EXTENSION>` with a extention of your language
 
 Example : `cp $(find /home/users/sk/github/ -type f -name "*.go") ./dataset/go/`
 
+# Usage
+
+for training use `python train.py` <br>
+for prediction use `python predict.py` or flask endpoint with `python predict-server.py` and post file text to /predict<br>
