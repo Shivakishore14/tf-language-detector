@@ -24,7 +24,7 @@ def process_lines(lines):
         x_data_raw = ['\n'.join(line_set) for line_set in per_x_lines]
     else:
         x_data_raw = lines
-    x_data = [_preprocess_data(data) for data in x_data_raw]
+    x_data = [_preprocess_data(data) for data in x_data_raw if data != '']
     return x_data
 
 

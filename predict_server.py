@@ -41,7 +41,9 @@ def health_check():
 def predict():
 
     data = request.data
+    print data.split('\n')
     x_data = dataset.process_lines(data.split('\n'))
+    print x_data
     x = np.array(list(vocab_processor.transform(x_data)))
     scores_, predictions_ = sess.run([scores, predictions], feed_dict={input_x: x})
     counts = np.bincount(predictions_)
