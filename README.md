@@ -34,7 +34,7 @@ cp $(find <DIR> -type f -name "*.<EXTENSION>") ./dataset/<LANG1>/
 
 NOTE: <br>
 replace `<DIR>` with a directory witch has a lot of programs / scripts for the particular `<EXTENSION>` <br>
-replace `<EXTENSION>` with a extension your extention of your language
+replace `<EXTENSION>` with a extention of your language
 
 Example : `cp $(find /home/users/sk/github/ -type f -name "*.go") ./dataset/go/`
 
